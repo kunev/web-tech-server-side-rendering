@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form method="POST">
+        <div class="form-field">
+            <label for="">Username</label>
+            <input id="" type="text" name="username">
+            <% if (locals.errors && errors['username']) { %>
+                <span class="error"><%= errors['username'] %></span>
+            <% } %>
+        </div>
+        <div class="form-field">
+            <label for="">Email</label>
+            <input id="" type="text" name="email">
+            <% if (locals.errors && errors['email']) { %>
+                <span class="error"><%= errors['email'] %></span>
+            <% } %>
+        </div>
+        <div class="form-field">
+            <label for="">Password</label>
+            <input id="" type="password" name="password">
+            <span class="error"></span>
+            <% if (locals.errors && errors['password']) { %>
+                <span class="error"><%= errors['password'] %></span>
+            <% } %>
+        </div>
+        <div class="form-field">
+            <label for="">Confirm password</label>
+            <input id="" type="password" name="password_confirmation">
+            <span class="error"></span>
+            <% if (locals.errors && errors['password_confirmation']) { %>
+                <span class="error"><%= errors['password_confirmation'] %></span>
+            <% } %>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
