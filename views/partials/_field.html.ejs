@@ -1,0 +1,7 @@
+<div class="form-field">
+    <label for=""><%= `${field[0].toUpperCase()}${field.slice(1)}`.replace('_', ' ') %></label>
+    <input id="" type="text" name="<%= field %>"/>
+    <% if (locals.error) { %>
+        <span class="error"><%= error %></span>
+    <% } %>
+</div>
