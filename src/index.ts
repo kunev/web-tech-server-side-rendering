@@ -4,7 +4,9 @@ import path from "path"
 const app = express()
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"))
+  res.render("index.html.ejs", {
+    time: new Date().toString()
+  })
 })
 
 app.listen(3000, () => {
